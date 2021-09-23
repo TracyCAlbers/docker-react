@@ -1,0 +1,12 @@
+language: generic
+
+sudo: required  #need super user to execute the build
+
+services:
+  - docker #automatically install docker.  
+
+before_install:
+  - docker build -t tracyalbers/docker-react -f Dockerfile.dev . #use the current directory and look for the .dev file (-f)
+
+script:
+  - docker run -e CI=true tracyalbers/docker-react npm run test
