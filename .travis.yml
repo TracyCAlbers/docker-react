@@ -1,5 +1,5 @@
-access_key_id: $aws-access-key
-secret_access_key: $aws-secret-key
+access_key_id: $AWS_ACCESS_KEY
+secret_access_key: $AWS_SECRET_KEY
 
 language: generic
 
