@@ -1,3 +1,6 @@
+access_key_id: $aws-access-key
+secret_access_key: $aws-secret-key
+
 language: generic
 
 sudo: required  #need super user to execute the build
@@ -10,3 +13,13 @@ before_install:
 
 script:
   - docker run -e CI=true tracyalbers/docker-react npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "docker"
+  env: "Docker-env"
+  bucket_name: "elasticbeanstalk-us-east-1-714107542275"
+  bucket_path: "docker"
+  on:
+    branch: master
