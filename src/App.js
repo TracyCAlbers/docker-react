@@ -1,3 +1,4 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
@@ -6,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          All you have to do is decide what to do with the time that is given to you.
-        </p>
+        <p>Bye there!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
